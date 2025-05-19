@@ -1,6 +1,8 @@
 # Utility functions for the student performance prediction project
 
+import itertools
 import matplotlib.pyplot as plt
+import numpy as np
 import seaborn as sns
 import pandas as pd
 
