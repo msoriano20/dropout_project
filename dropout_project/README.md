@@ -1,61 +1,69 @@
-# Dropout Project
+# Student Performance Prediction Project
 
-<a target="_blank" href="https://cookiecutter-data-science.drivendata.org/">
-    <img src="https://img.shields.io/badge/CCDS-Project%20template-328F97?logo=cookiecutter" />
-</a>
+This project aims to predict student performance based on various demographic, academic, and social factors. The analysis is conducted using machine learning techniques, and the project is structured to facilitate easy replication of the analysis pipeline.
 
-Predicting students in dropout risk. something something something
-
-## Project Organization
+## Project Structure
 
 ```
-├── LICENSE            <- Open-source license if one is chosen
-├── Makefile           <- Makefile with convenience commands like `make data` or `make train`
-├── README.md          <- The top-level README for developers using this project.
+student-performance-prediction
 ├── data
-│   ├── external       <- Data from third party sources.
-│   ├── interim        <- Intermediate data that has been transformed.
-│   ├── processed      <- The final, canonical data sets for modeling.
-│   └── raw            <- The original, immutable data dump.
-│
-├── docs               <- A default mkdocs project; see www.mkdocs.org for details
-│
-├── models             <- Trained and serialized models, model predictions, or model summaries
-│
-├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
-│                         the creator's initials, and a short `-` delimited description, e.g.
-│                         `1.0-jqp-initial-data-exploration`.
-│
-├── pyproject.toml     <- Project configuration file with package metadata for 
-│                         dropout_project and configuration for tools like black
-│
-├── references         <- Data dictionaries, manuals, and all other explanatory materials.
-│
-├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
-│   └── figures        <- Generated graphics and figures to be used in reporting
-│
-├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
-│                         generated with `pip freeze > requirements.txt`
-│
-├── setup.cfg          <- Configuration file for flake8
-│
-└── dropout_project   <- Source code for use in this project.
-    │
-    ├── __init__.py             <- Makes dropout_project a Python module
-    │
-    ├── config.py               <- Store useful variables and configuration
-    │
-    ├── dataset.py              <- Scripts to download or generate data
-    │
-    ├── features.py             <- Code to create features for modeling
-    │
-    ├── modeling                
-    │   ├── __init__.py 
-    │   ├── predict.py          <- Code to run model inference with trained models          
-    │   └── train.py            <- Code to train models
-    │
-    └── plots.py                <- Code to create visualizations
+│   ├── student-mat.csv         # Student performance data for mathematics
+│   └── student-por.csv         # Student performance data for Portuguese
+├── notebooks
+│   └── sprint_2_and_3.ipynb    # Jupyter notebook containing the analysis pipeline
+├── src
+│   ├── data_preprocessing.py    # Script for data loading and preprocessing
+│   ├── feature_engineering.py    # Script for feature engineering
+│   ├── model_training.py         # Script for training machine learning models
+│   ├── evaluation.py             # Script for model evaluation
+│   └── utils.py                  # Utility functions used across modules
+├── requirements.txt              # List of required Python packages
+└── README.md                     # Documentation for the project
 ```
 
---------
+## Getting Started
 
+To replicate the analysis pipeline, follow these steps:
+
+### Prerequisites
+
+Ensure you have Python installed on your machine. It is recommended to use a virtual environment to manage dependencies.
+
+### Installation
+
+1. Clone the repository:
+   ```
+   git clone https://github.com/msoriano20/dropout_project.git
+   cd student-performance-prediction
+   ```
+
+2. Install the required packages:
+   ```
+   pip install -r requirements.txt
+   ```
+
+### Running the Analysis
+
+1. Open the Jupyter notebook:
+   ```
+   jupyter notebook notebooks/predict_dropout.ipynb
+   ```
+
+2. Follow the instructions in the notebook to execute the analysis pipeline. The notebook includes sections for:
+   - Data loading
+   - Data preprocessing
+   - Feature engineering
+   - Model training
+   - Model evaluation and hyperparameter tuning
+
+### Scripts Overview
+
+- **data_preprocessing.py**: Handles data loading, missing value treatment, and feature scaling.
+- **feature_engineering.py**: Creates new features to enhance model performance.
+- **model_training.py**: Trains various models and performs hyperparameter tuning.
+- **evaluation.py**: Evaluates model performance using various metrics and visualizations.
+- **utils.py**: Contains utility functions for plotting and displaying results.
+
+## Conclusion
+
+This project provides a comprehensive analysis of student performance prediction using machine learning techniques. By following the instructions above, you can replicate the analysis and explore the impact of different features on student outcomes.
