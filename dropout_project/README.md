@@ -58,11 +58,11 @@ Ensure you have Python installed on your machine. It is recommended to use a vir
 
 ### Scripts Overview
 
-- **data_preprocessing.py**: Handles data loading, missing value treatment, and feature scaling.
-- **feature_engineering.py**: Creates new features to enhance model performance.
-- **model_training.py**: Trains various models and performs hyperparameter tuning.
-- **evaluation.py**: Evaluates model performance using various metrics and visualizations.
-- **utils.py**: Contains utility functions for plotting and displaying results.
+- **data_preprocessing**: Handles data loading, missing value treatment, and feature scaling.
+- **feature_engineering**: Creates new features to enhance model performance.
+- **model_training**: Trains various models and performs hyperparameter tuning.
+- **evaluation**: Evaluates model performance using various metrics and visualizations.
+- **utils**: Contains utility functions for plotting and displaying results.
 
 ## Conclusion
 
